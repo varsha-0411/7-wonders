@@ -1,15 +1,25 @@
 const express = require("express");
-const path = require("path");
+const cors = require("cors");
+const morgan = require("morgan");
+const wonders = require("./data/wonders.json");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "../public")));
+app.use(cors());
+app.use(morgan("dev"));
+app.use(express.json());
+app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/index.html"));
+app.get("/api/wonders", (req, res) => {
+  res.json(wonders);
 });
 
-const PORT = 3000;
+app.get("/", (req, res) => {
+  res.send("Welcome to the Seven Wonders of the World API");
+});
+
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
