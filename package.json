@@ -1,8 +1,29 @@
 {
   "name": "seven-wonders-app",
   "version": "1.0.0",
+  "description": "A Node.js web application that displays information about the Seven Wonders of the World",
   "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "seven-wonders",
+    "nodejs",
+    "express",
+    "docker",
+    "devops-project"
+  ],
+  "author": "Varsha",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
