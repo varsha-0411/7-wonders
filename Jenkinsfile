@@ -8,6 +8,12 @@ pipeline {
 
     stages {
 
+        stage('Clone Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/varsha-0411/7-wonders.git'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh "docker build -t ${IMAGE_NAME} ."
