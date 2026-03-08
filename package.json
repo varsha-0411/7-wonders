@@ -1,7 +1,6 @@
 {
   "name": "seven-wonders-app",
   "version": "1.0.0",
-  "description": "Seven Wonders of the World Node.js Application",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
