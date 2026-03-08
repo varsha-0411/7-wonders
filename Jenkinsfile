@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'varsha0411/seven-wonders'
+        IMAGE_NAME = 'varsha0411/7-wonders'
         CONTAINER_NAME = 'wonders-container'
     }
 
@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/your-repo/seven-wonders.git'
+                git 'https://github.com/varsha-0411/7-wonders.git'
             }
         }
 
