@@ -8,9 +8,9 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
+        stage('Install Dependencies') {
             steps {
-                git branch: 'main', url: 'https://github.com/varsha-0411/7-wonders.git'
+                sh 'npm install'
             }
         }
 
@@ -29,5 +29,6 @@ pipeline {
                 '''
             }
         }
+
     }
 }
